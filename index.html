@@ -32,8 +32,12 @@
     <script src="main.js"></script>
   </head>
   <body>
+    <div class="highlights" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%"></div>
     <!--Header sajta-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-success">
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-success"
+      style="position: fixed; top: 0; left: 0; width: 100%; z-index: 1"
+    >
       <a class="navbar-brand" href="#" id="naslov">Frogs</a>
       <button
         class="navbar-toggler"
@@ -58,7 +62,7 @@
           <li class="nav-item">
             <a class="nav-link" href="other.html">Other</a>
           </li>
-          
+
         </ul>
         <form class="form-inline my-2 my-lg-0">
             <input
@@ -66,13 +70,15 @@
               type="search"
               placeholder="Search"
               id='pretraga'
+              onkeyup='highlight()'
             />
-            <button class="btn btn-outline-danger my-2 my-sm-0" type="submit" onclick="
-            pretrazi()"
+            <button class="btn btn-outline-danger my-2 my-sm-0" type="submit" onclick="pretrazi()"
             >
               Search
             </button>
     </nav>
+
+    <div style="width: 100%; height: 6rem"></div>
 
     <div class="card-deck">
       <div class="card">
