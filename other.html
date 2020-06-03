@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Other</title>
+    <link rel="stylesheet" href="mojStil.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js"></script>
+
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-success">
+      <a class="navbar-brand" href="#" id="naslov">Frogs</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item ">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gallery.html">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="other.html">Other</a>
+          </li>
+          
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input
+              class="form-control mr-sm-2"
+              type="search"
+              placeholder="Search"
+              id='pretraga'
+            />
+            <button class="btn btn-outline-danger my-2 my-sm-0" type="submit" onclick="
+            pretrazi()"
+            >
+              Search
+            </button>
+    </nav>
+        <!--Forma-->
+        <form> 
+            <div id="forma">
+<p>If you want to become frog, please fill up the form</p>
+          <div id='err'></div>
+                <div class="form-group" onmouseout="username()" >
+                    <input type="text" class="form-control-lg  " placeholder="Enter Username" id="username" >
+                    <div id='errUsername'></div>
+                </div>
+
+                <div class="form-group" onmouseout="email()">
+                    <input type="email" class="form-control-lg " placeholder="Enter email" id="email">
+                    <div id='errEmail'></div>
+                </div>
+
+                <div class="form-group" onmouseout="pwd()">
+                    <input type="password" class="form-control-lg " placeholder="Enter password" id="pwd">
+                    <div id='errPwd'></div>
+                </div>
+
+                <div class="form-group" onmouseover="cpwd()">
+                    <input type="password" class="form-control-lg " placeholder="Confirm password" id="cpwd">
+                    <div id='errCpwd'></div>
+                </div>
+
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" onclick="prikazi()" >Submit</button>
+
+                <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">You can find some fros in Amazonia, Brazil</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15930.09343071683!2d-62.224635263297834!3d-3.465283741125318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91e8605342744385%3A0x3d3c6dc1394a7fc7!2sAmazon%20Rainforest!5e0!3m2!1sen!2srs!4v1591126614186!5m2!1sen!2srs" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+                
+            </div>
+          </form>
+          
+        
+
+    <div class="d-flex justify-content-center kraj">
+      <img src="slike/desno.jpg" />
+      <p>Darko</p>
+      <img src="slike/levo.jpg" />
+    </div>
+  </body>
+</html>
